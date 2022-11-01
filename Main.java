@@ -3,36 +3,58 @@ import java.util.*;
 class Main {
 
 
-    final Letter lt = new Letter('B');
+    /*
+     * CHANGE THE WORDS HERE
+     */
+    final Letter lt = new Letter('B'); // Constraints -> Must be a character within the referenced table
+    static final String words = new String("HELLO WORLD"); // -> Any characters should work
+    /*
+     * END OF CHANGE THE WORDS HERE
+     */
+
 
     public static void main(String[] args) {
         
         Main main = new Main();
-        ReferenceTable rt = new ReferenceTable(main.lt);
-        /* 
-        rt.generateReferenceTable();
-        rt.generateOffSetReferenceTable();
 
+        String encoded = main.encode(words);
+
+        System.out.println(encoded);
+        System.out.println(main.decode(encoded));
         
-        HashMap<Integer, ReferenceRow> hm = rt.getReferenceRows();
-        for (Map.Entry<Integer, ReferenceRow> curr : hm.entrySet()) {
-            System.out.println(curr.getKey() +" and "+curr.getValue().getLtr().getCharacter() +" and offset is "+curr.getValue().getOffsetLtr().getCharacter());
-        }
-*/
-        
-        System.out.println(main.encodingText("HELLO WORLD"));
     }
     
-    public String encodingText(String plainText) {
+    public String encode(String plainText) {
         ReferenceTable rt = new ReferenceTable(lt);
+        
         String result = "";
         for (Character c : plainText.toCharArray()) {
+   
+            Letter currentLetter = rt.getOffSetLetterByLetter(c);
 
+            if (currentLetter != null)
+                result += currentLetter.getCharacter();
+            else
+                result += c;
             
-            // Convert the character to index code
-            int i = rt.convertCharacterToIdx(new Letter(c));
-            result += rt.convertIdxToOffSetLetter(i).getCharacter();
+        }
+        
+        return result;
+    }
 
+    public String decode(String encodedText) {
+        ReferenceTable rt = new ReferenceTable(lt);
+        
+        String result = "";
+        for (Character c : encodedText.toCharArray()) {
+   
+            Letter currentLetter = rt.getLetterByOffSetLetter(c);
+
+            if (currentLetter != null)
+                result += currentLetter.getCharacter();
+            else
+                result += c;
+            
         }
         
         return result;

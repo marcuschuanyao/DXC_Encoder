@@ -15,6 +15,7 @@ UML Class Diagram Design
 6) ReferenceTable Class -> The reference table represents the tables that stores the lists of Reference Row
 
 How it works?
+
 The program uses two main hashmap to record the Character and offset characters, followed by offset characters and Character. When you run the encode method, the program will loop through each character and find the offset character in the hashmap. Once, it find the value in the hashmap, it will append it to the text. The same logic goes to the decode method.
 
 How to run?

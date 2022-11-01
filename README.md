@@ -1,5 +1,5 @@
 # DXC_Encoder
-This is the question attempted for DXC interview. The question asked for encoding the text.
+This is the question attempted for DXC interview. The question asked for encoding and decoding the text.
 
 As the question asked for OOP concepts, I have adopted using Inheritance, Encapsulation, Abstraction, and Polymorphism.
 

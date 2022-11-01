@@ -13,7 +13,9 @@ UML Class Diagram Design
 4) Number Class -> Stores the number character. It inherits the Letter which is the parent
 5) SpecialSymbol Class -> Stores the special symbol character. It inherits the Letter which is the parent.
 6) ReferenceTable Class -> The reference table represents the tables that stores the lists of Reference Row
-7) ReferenceRows Class -> The reference rows stores all the Letter objects. Each ReferenceRows tied to a single ReferenceTable.
+
+How it works?
+The program uses two main hashmap to record the Character and offset characters, followed by offset characters and Character. When you run the encode method, the program will loop through each character and find the offset character in the hashmap. Once, it found it will append to the text. Same goes to the decode method.
 
 How to run?
 1) Clone the project.

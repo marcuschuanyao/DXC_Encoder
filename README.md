@@ -5,7 +5,7 @@ As the question asked for OOP concepts, I have adopted using Inheritance, Encaps
 
 Below is the UML Diagram.
 UML Class Diagram Design
-![image](https://user-images.githubusercontent.com/11598446/199240222-3572e445-c865-48ea-a3dc-3dbe0fc1b1f1.png)
+![image](https://user-images.githubusercontent.com/11598446/199294949-6b9f8391-868f-4f10-8863-9a53b83ae101.png)
 
 1) Main Class -> The driver class that runs the program
 2) Letter Class -> Stores the letter character

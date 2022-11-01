@@ -21,8 +21,8 @@ The program uses two main hashmap to record the Character and offset characters,
 
 How to run?
 1) Clone the project.
-2) Go to the folder and run *.java on your terminal to compile
-3) Lastly, java Main to run the project
+2) Go to the folder and run "*.java" (exclude the quotes) on your terminal to compile
+3) Lastly, "java Main" exclude the quotes to run the project
 
 How to test different test cases?
 1) Go to the Main.java
